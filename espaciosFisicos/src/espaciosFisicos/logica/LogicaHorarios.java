@@ -1,5 +1,7 @@
 package espaciosFisicos.logica;
 
+import model.Bloquehora;
+
 public class LogicaHorarios {
 	
 	public LogicaHorarios()
@@ -21,5 +23,11 @@ private static LogicaHorarios instance;
 		return "hellow world";
 	}
 		
+	public String getHorario()
+	{
+		Bloquehora bloquehora = new Bloquehora();
+		//bloque = name
+		return "hellow world";
+	}
 	
 }
