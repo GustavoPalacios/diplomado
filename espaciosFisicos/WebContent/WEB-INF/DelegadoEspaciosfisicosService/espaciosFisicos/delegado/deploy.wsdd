@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from DelegadoEspaciosfisicosService WSDL service -->
+
+  <service name="DelegadoEspaciosfisicos" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://delegado.espaciosFisicos"/>
+      <parameter name="wsdlServiceElement" value="DelegadoEspaciosfisicosService"/>
+      <parameter name="schemaQualified" value="http://delegado.espaciosFisicos"/>
+      <parameter name="wsdlServicePort" value="DelegadoEspaciosfisicos"/>
+      <parameter name="className" value="espaciosFisicos.delegado.DelegadoEspaciosfisicos"/>
+      <parameter name="wsdlPortType" value="DelegadoEspaciosfisicos"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriaRecursoFisicosAll" qname="operNS:getMateriaRecursoFisicosAll" returnQName="retNS:getMateriaRecursoFisicosAllReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriasAll" qname="operNS:getMateriasAll" returnQName="retNS:getMateriasAllReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriaById" qname="operNS:getMateriaById" returnQName="retNS:getMateriaByIdReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriaByName" qname="operNS:getMateriaByName" returnQName="retNS:getMateriaByNameReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getHorariosAll" qname="operNS:getHorariosAll" returnQName="retNS:getHorariosAllReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getHorarioById" qname="operNS:getHorarioById" returnQName="retNS:getHorarioByIdReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGrupoByEstado" qname="operNS:getGrupoByEstado" returnQName="retNS:getGrupoByEstadoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:estado" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGrupoByUnidad" qname="operNS:getGrupoByUnidad" returnQName="retNS:getGrupoByUnidadReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:unidad" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGrupoByMateria" qname="operNS:getGrupoByMateria" returnQName="retNS:getGrupoByMateriaReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:materia" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGrupoByName" qname="operNS:getGrupoByName" returnQName="retNS:getGrupoByNameReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:name" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriaRecursoFisicoByIdMateria" qname="operNS:getMateriaRecursoFisicoByIdMateria" returnQName="retNS:getMateriaRecursoFisicoByIdMateriaReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getMateriaRecursoFisicoByRecursoFisico" qname="operNS:getMateriaRecursoFisicoByRecursoFisico" returnQName="retNS:getMateriaRecursoFisicoByRecursoFisicoReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:recursoFisico" type="tns:string"/>
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGruposAll" qname="operNS:getGruposAll" returnQName="retNS:getGruposAllReturn" returnType="rtns:string" soapAction="">
+      </operation>
+      <operation xmlns:operNS="http://delegado.espaciosFisicos" xmlns:retNS="http://delegado.espaciosFisicos" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="getGrupoById" qname="operNS:getGrupoById" returnQName="retNS:getGrupoByIdReturn" returnType="rtns:string" soapAction="">
+        <parameter xmlns:pns="http://delegado.espaciosFisicos" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:id" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="getGrupoById getGrupoByName getGrupoByEstado getMateriaRecursoFisicoByRecursoFisico getMateriaById getMateriaRecursoFisicoByIdMateria getHorariosAll getMateriaByName getGruposAll getGrupoByMateria getMateriasAll getHorarioById getGrupoByUnidad getMateriaRecursoFisicosAll"/>
+
+  </service>
+</deployment>

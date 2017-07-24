@@ -1,6 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="persistence">
+	
 		<class>model.Bloquehora</class>
+		<class>model.Grupo</class>
+		<class>model.Materiarecursofisico</class>
+		<class>model.Materia</class>
+		<class>model.Aspirante</class>
+		<class>model.Calificacion</class>
+		<class>model.Categoria</class>
+		<class>model.Clasesemanal</class>
+		<class>model.Conceptoliquidado</class>
+		<class>model.Dept</class>
+		<class>model.Docenteacademico</class>
+		<class>model.Docenteclasesemanal</class>
+		<class>model.Docentegrupo</class>
+		<class>model.Docenteunidad</class>
+		<class>model.Emp</class>
+		<class>model.Espaciofisico</class>
+		<class>model.Estrato</class>
+		<class>model.Estudiantepensum</class>
+		<class>model.Formularioinscripcion</class>
+		<class>model.Grupomatriculado</class>
+		<class>model.HisCalificacion</class>
+		<class>model.HisGrupomatriculado</class>
+		<class>model.HisMatriculaacademica</class>
+		<class>model.HisNota</class>
+		<class>model.HisPagoliquidacion</class>
+		<class>model.Informacionsocioeconomica</class>
+		<class>model.Jornada</class>
+		<class>model.Liquidacion</class>
+		<class>model.Localidad</class>
+		<class>model.Matriculaacademica</class>
+		<class>model.Modalidad</class>
+		<class>model.Niveleducativo</class>
+		<class>model.Normaconcepto</class>
+		<class>model.Nota</class>
+		<class>model.Pagoliquidacion</class>
+		<class>model.Periodouniversidad</class>
+		<class>model.Programa</class>
+		<class>model.Recursofisico</class>
+		<class>model.Recursofisicounidad</class>
+		<class>model.Registroacademico</class>
+		<class>model.Servicioperiodo</class>
+		<class>model.Sistemaevaluacion</class>
+		<class>model.Situacionestudiante</class>
+		<class>model.Tipogrupo</class>
+		<class>model.Tiporecursofisico</class>
+		<class>model.Unidad</class>
+		<class>model.Unidadprograma</class>
+		<class>model.DocenteacademicoPK</class>
+		<class>model.DocenteclasesemanalPK</class>
+		<class>model.DocenteunidadPK</class>
+		<!--
+       	<provider>org.hibernate.ejb.HibernatePersistence</provider>
+       	-->
+		<properties>
+			<property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect" />
+			<property name="hibernate.connection.driver_class" value="oracle.jdbc.driver.OracleDriver" />
+			<property name="hibernate.connection.username" value="academico" />
+			<property name="hibernate.connection.password" value="Coomevajul17" />
+			<property name="hibernate.connection.url" value="jdbc:oracle:thin:@localhost:1521:xe" />
+		</properties>
 	</persistence-unit>
 </persistence>

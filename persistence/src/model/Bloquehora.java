@@ -14,7 +14,11 @@ import java.util.Date;
 @Table(name="BLOQUEHORAS")
 @NamedQueries({
 @NamedQuery(name="Bloquehora.findAll", query="SELECT b FROM Bloquehora b"),
-@NamedQuery(name="Bloquehora.findId", query="SELECT b FROM Bloquehora b where b.blhoId = :blhoId")
+@NamedQuery(name="Bloquehora.findId", query="SELECT b FROM Bloquehora b where b.blhoId = :blhoId"),
+@NamedQuery(name="Bloquehora.findName", query="SELECT b FROM Bloquehora b where b.blhoNombre = :blhoNombre"),
+@NamedQuery(name="Bloquehora.findHoraIni", query="SELECT b FROM Bloquehora b where b.blhoHorainicio = :blhoHorainicio"),
+@NamedQuery(name="Bloquehora.findHoraFin", query="SELECT b FROM Bloquehora b where b.blhoHorafinal = :blhoHorafinal"),
+@NamedQuery(name="Bloquehora.findHoraBetween", query="SELECT b FROM Bloquehora b where b.blhoHorafinal between :blhoHorainicio and :blhoHorafinal")
 }) 
 public class Bloquehora implements Serializable {
 	private static final long serialVersionUID = 1L;

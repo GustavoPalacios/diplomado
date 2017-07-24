@@ -1,0 +1,96 @@
+<ns1:deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java" xmlns:ns1="http://xml.apache.org/axis/wsdd/">
+ <ns1:globalConfiguration>
+  <ns1:parameter name="sendMultiRefs" value="true"/>
+  <ns1:parameter name="disablePrettyXML" value="true"/>
+  <ns1:parameter name="adminPassword" value="admin"/>
+  <ns1:parameter name="attachments.Directory" value="C:\workspace2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\espaciosFisicos\WEB-INF\attachments"/>
+  <ns1:parameter name="dotNetSoapEncFix" value="true"/>
+  <ns1:parameter name="enableNamespacePrefixOptimization" value="false"/>
+  <ns1:parameter name="sendXMLDeclaration" value="true"/>
+  <ns1:parameter name="sendXsiTypes" value="true"/>
+  <ns1:parameter name="attachments.implementation" value="org.apache.axis.attachments.AttachmentsImpl"/>
+  <ns1:requestFlow>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="session"/>
+   </ns1:handler>
+   <ns1:handler type="java:org.apache.axis.handlers.JWSHandler">
+    <ns1:parameter name="scope" value="request"/>
+    <ns1:parameter name="extension" value=".jwr"/>
+   </ns1:handler>
+  </ns1:requestFlow>
+ </ns1:globalConfiguration>
+ <ns1:handler name="URLMapper" type="java:org.apache.axis.handlers.http.URLMapper"/>
+ <ns1:handler name="LocalResponder" type="java:org.apache.axis.transport.local.LocalResponder"/>
+ <ns1:handler name="Authenticate" type="java:org.apache.axis.handlers.SimpleAuthenticationHandler"/>
+ <ns1:service name="AdminService" provider="java:MSG">
+  <ns1:parameter name="allowedMethods" value="AdminService"/>
+  <ns1:parameter name="enableRemoteAdmin" value="false"/>
+  <ns1:parameter name="className" value="org.apache.axis.utils.Admin"/>
+  <ns1:namespace>http://xml.apache.org/axis/wsdd/</ns1:namespace>
+ </ns1:service>
+ <ns1:service name="Version" provider="java:RPC">
+  <ns1:parameter name="allowedMethods" value="getVersion"/>
+  <ns1:parameter name="className" value="org.apache.axis.Version"/>
+ </ns1:service>
+ <ns1:service name="DelegadoEspaciosfisicos" provider="java:RPC" style="wrapped" use="literal">
+  <ns2:operation name="getMateriaRecursoFisicosAll" qname="ns1:getMateriaRecursoFisicosAll" returnQName="ns1:getMateriaRecursoFisicosAllReturn" returnType="xsd:string" soapAction="" xmlns:ns1="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:ns2="http://xml.apache.org/axis/wsdd/"/>
+  <ns1:operation name="getMateriasAll" qname="ns2:getMateriasAll" returnQName="ns2:getMateriasAllReturn" returnType="xsd:string" soapAction="" xmlns:ns2="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getMateriaById" qname="ns3:getMateriaById" returnQName="ns3:getMateriaByIdReturn" returnType="xsd:string" soapAction="" xmlns:ns3="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns3:id" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getMateriaByName" qname="ns4:getMateriaByName" returnQName="ns4:getMateriaByNameReturn" returnType="xsd:string" soapAction="" xmlns:ns4="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns4:name" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getHorariosAll" qname="ns5:getHorariosAll" returnQName="ns5:getHorariosAllReturn" returnType="xsd:string" soapAction="" xmlns:ns5="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getHorarioById" qname="ns6:getHorarioById" returnQName="ns6:getHorarioByIdReturn" returnType="xsd:string" soapAction="" xmlns:ns6="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns6:id" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getGrupoByEstado" qname="ns7:getGrupoByEstado" returnQName="ns7:getGrupoByEstadoReturn" returnType="xsd:string" soapAction="" xmlns:ns7="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns7:estado" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getGrupoByUnidad" qname="ns8:getGrupoByUnidad" returnQName="ns8:getGrupoByUnidadReturn" returnType="xsd:string" soapAction="" xmlns:ns8="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns8:unidad" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getGrupoByMateria" qname="ns9:getGrupoByMateria" returnQName="ns9:getGrupoByMateriaReturn" returnType="xsd:string" soapAction="" xmlns:ns9="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns9:materia" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getGrupoByName" qname="ns10:getGrupoByName" returnQName="ns10:getGrupoByNameReturn" returnType="xsd:string" soapAction="" xmlns:ns10="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns10:name" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getMateriaRecursoFisicoByIdMateria" qname="ns11:getMateriaRecursoFisicoByIdMateria" returnQName="ns11:getMateriaRecursoFisicoByIdMateriaReturn" returnType="xsd:string" soapAction="" xmlns:ns11="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns11:id" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getMateriaRecursoFisicoByRecursoFisico" qname="ns12:getMateriaRecursoFisicoByRecursoFisico" returnQName="ns12:getMateriaRecursoFisicoByRecursoFisicoReturn" returnType="xsd:string" soapAction="" xmlns:ns12="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns12:recursoFisico" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:operation name="getGruposAll" qname="ns13:getGruposAll" returnQName="ns13:getGruposAllReturn" returnType="xsd:string" soapAction="" xmlns:ns13="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema"/>
+  <ns1:operation name="getGrupoById" qname="ns14:getGrupoById" returnQName="ns14:getGrupoByIdReturn" returnType="xsd:string" soapAction="" xmlns:ns14="http://delegado.espaciosFisicos" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <ns1:parameter qname="ns14:id" type="xsd:string"/>
+  </ns1:operation>
+  <ns1:parameter name="allowedMethods" value="getGrupoById getGrupoByName getGrupoByEstado getMateriaRecursoFisicoByRecursoFisico getMateriaById getMateriaRecursoFisicoByIdMateria getHorariosAll getMateriaByName getGruposAll getGrupoByMateria getMateriasAll getHorarioById getGrupoByUnidad getMateriaRecursoFisicosAll"/>
+  <ns1:parameter name="typeMappingVersion" value="1.2"/>
+  <ns1:parameter name="wsdlPortType" value="DelegadoEspaciosfisicos"/>
+  <ns1:parameter name="className" value="espaciosFisicos.delegado.DelegadoEspaciosfisicos"/>
+  <ns1:parameter name="wsdlServicePort" value="DelegadoEspaciosfisicos"/>
+  <ns1:parameter name="schemaQualified" value="http://delegado.espaciosFisicos"/>
+  <ns1:parameter name="wsdlTargetNamespace" value="http://delegado.espaciosFisicos"/>
+  <ns1:parameter name="wsdlServiceElement" value="DelegadoEspaciosfisicosService"/>
+ </ns1:service>
+ <ns1:transport name="http">
+  <ns1:requestFlow>
+   <ns1:handler type="URLMapper"/>
+   <ns1:handler type="java:org.apache.axis.handlers.http.HTTPAuthHandler"/>
+  </ns1:requestFlow>
+  <ns1:parameter name="qs:list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs:wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+  <ns1:parameter name="qs.list" value="org.apache.axis.transport.http.QSListHandler"/>
+  <ns1:parameter name="qs.method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs:method" value="org.apache.axis.transport.http.QSMethodHandler"/>
+  <ns1:parameter name="qs.wsdl" value="org.apache.axis.transport.http.QSWSDLHandler"/>
+ </ns1:transport>
+ <ns1:transport name="local">
+  <ns1:responseFlow>
+   <ns1:handler type="LocalResponder"/>
+  </ns1:responseFlow>
+ </ns1:transport>
+</ns1:deployment>

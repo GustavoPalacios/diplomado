@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://delegado.espaciosFisicos" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://delegado.espaciosFisicos" xmlns:intf="http://delegado.espaciosFisicos" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://delegado.espaciosFisicos" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getMateriaRecursoFisicosAll">
+    <complexType/>
+   </element>
+   <element name="getMateriaRecursoFisicosAllResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriaRecursoFisicosAllReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriasAll">
+    <complexType/>
+   </element>
+   <element name="getMateriasAllResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriasAllReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriaByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaByName">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaByNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriaByNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHorariosAll">
+    <complexType/>
+   </element>
+   <element name="getHorariosAllResponse">
+    <complexType>
+     <sequence>
+      <element name="getHorariosAllReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHorarioById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getHorarioByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getHorarioByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByEstado">
+    <complexType>
+     <sequence>
+      <element name="estado" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByEstadoResponse">
+    <complexType>
+     <sequence>
+      <element name="getGrupoByEstadoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByUnidad">
+    <complexType>
+     <sequence>
+      <element name="unidad" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByUnidadResponse">
+    <complexType>
+     <sequence>
+      <element name="getGrupoByUnidadReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByMateria">
+    <complexType>
+     <sequence>
+      <element name="materia" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByMateriaResponse">
+    <complexType>
+     <sequence>
+      <element name="getGrupoByMateriaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByName">
+    <complexType>
+     <sequence>
+      <element name="name" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByNameResponse">
+    <complexType>
+     <sequence>
+      <element name="getGrupoByNameReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaRecursoFisicoByIdMateria">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaRecursoFisicoByIdMateriaResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriaRecursoFisicoByIdMateriaReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaRecursoFisicoByRecursoFisico">
+    <complexType>
+     <sequence>
+      <element name="recursoFisico" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getMateriaRecursoFisicoByRecursoFisicoResponse">
+    <complexType>
+     <sequence>
+      <element name="getMateriaRecursoFisicoByRecursoFisicoReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGruposAll">
+    <complexType/>
+   </element>
+   <element name="getGruposAllResponse">
+    <complexType>
+     <sequence>
+      <element name="getGruposAllReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoById">
+    <complexType>
+     <sequence>
+      <element name="id" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getGrupoByIdResponse">
+    <complexType>
+     <sequence>
+      <element name="getGrupoByIdReturn" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getGrupoByEstadoRequest">
+
+      <wsdl:part element="impl:getGrupoByEstado" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByMateriaRequest">
+
+      <wsdl:part element="impl:getGrupoByMateria" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByNameResponse">
+
+      <wsdl:part element="impl:getGrupoByNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHorarioByIdResponse">
+
+      <wsdl:part element="impl:getHorarioByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicoByRecursoFisicoRequest">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicoByRecursoFisico" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriasAllResponse">
+
+      <wsdl:part element="impl:getMateriasAllResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHorariosAllRequest">
+
+      <wsdl:part element="impl:getHorariosAll" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByNameRequest">
+
+      <wsdl:part element="impl:getGrupoByName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByMateriaResponse">
+
+      <wsdl:part element="impl:getGrupoByMateriaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByIdResponse">
+
+      <wsdl:part element="impl:getGrupoByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByUnidadResponse">
+
+      <wsdl:part element="impl:getGrupoByUnidadResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHorarioByIdRequest">
+
+      <wsdl:part element="impl:getHorarioById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicoByIdMateriaRequest">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicoByIdMateria" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getHorariosAllResponse">
+
+      <wsdl:part element="impl:getHorariosAllResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaByIdResponse">
+
+      <wsdl:part element="impl:getMateriaByIdResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicosAllResponse">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicosAllResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGruposAllResponse">
+
+      <wsdl:part element="impl:getGruposAllResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicoByRecursoFisicoResponse">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicoByRecursoFisicoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaByIdRequest">
+
+      <wsdl:part element="impl:getMateriaById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriasAllRequest">
+
+      <wsdl:part element="impl:getMateriasAll" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicoByIdMateriaResponse">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicoByIdMateriaResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaByNameResponse">
+
+      <wsdl:part element="impl:getMateriaByNameResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaRecursoFisicosAllRequest">
+
+      <wsdl:part element="impl:getMateriaRecursoFisicosAll" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getMateriaByNameRequest">
+
+      <wsdl:part element="impl:getMateriaByName" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByUnidadRequest">
+
+      <wsdl:part element="impl:getGrupoByUnidad" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByEstadoResponse">
+
+      <wsdl:part element="impl:getGrupoByEstadoResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGruposAllRequest">
+
+      <wsdl:part element="impl:getGruposAll" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getGrupoByIdRequest">
+
+      <wsdl:part element="impl:getGrupoById" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="DelegadoEspaciosfisicos">
+
+      <wsdl:operation name="getMateriaRecursoFisicosAll">
+
+         <wsdl:input message="impl:getMateriaRecursoFisicosAllRequest" name="getMateriaRecursoFisicosAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriaRecursoFisicosAllResponse" name="getMateriaRecursoFisicosAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriasAll">
+
+         <wsdl:input message="impl:getMateriasAllRequest" name="getMateriasAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriasAllResponse" name="getMateriasAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaById">
+
+         <wsdl:input message="impl:getMateriaByIdRequest" name="getMateriaByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriaByIdResponse" name="getMateriaByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaByName">
+
+         <wsdl:input message="impl:getMateriaByNameRequest" name="getMateriaByNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriaByNameResponse" name="getMateriaByNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHorariosAll">
+
+         <wsdl:input message="impl:getHorariosAllRequest" name="getHorariosAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHorariosAllResponse" name="getHorariosAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHorarioById">
+
+         <wsdl:input message="impl:getHorarioByIdRequest" name="getHorarioByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getHorarioByIdResponse" name="getHorarioByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByEstado">
+
+         <wsdl:input message="impl:getGrupoByEstadoRequest" name="getGrupoByEstadoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGrupoByEstadoResponse" name="getGrupoByEstadoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByUnidad">
+
+         <wsdl:input message="impl:getGrupoByUnidadRequest" name="getGrupoByUnidadRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGrupoByUnidadResponse" name="getGrupoByUnidadResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByMateria">
+
+         <wsdl:input message="impl:getGrupoByMateriaRequest" name="getGrupoByMateriaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGrupoByMateriaResponse" name="getGrupoByMateriaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByName">
+
+         <wsdl:input message="impl:getGrupoByNameRequest" name="getGrupoByNameRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGrupoByNameResponse" name="getGrupoByNameResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaRecursoFisicoByIdMateria">
+
+         <wsdl:input message="impl:getMateriaRecursoFisicoByIdMateriaRequest" name="getMateriaRecursoFisicoByIdMateriaRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriaRecursoFisicoByIdMateriaResponse" name="getMateriaRecursoFisicoByIdMateriaResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaRecursoFisicoByRecursoFisico">
+
+         <wsdl:input message="impl:getMateriaRecursoFisicoByRecursoFisicoRequest" name="getMateriaRecursoFisicoByRecursoFisicoRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getMateriaRecursoFisicoByRecursoFisicoResponse" name="getMateriaRecursoFisicoByRecursoFisicoResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGruposAll">
+
+         <wsdl:input message="impl:getGruposAllRequest" name="getGruposAllRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGruposAllResponse" name="getGruposAllResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoById">
+
+         <wsdl:input message="impl:getGrupoByIdRequest" name="getGrupoByIdRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getGrupoByIdResponse" name="getGrupoByIdResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="DelegadoEspaciosfisicosSoapBinding" type="impl:DelegadoEspaciosfisicos">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getMateriaRecursoFisicosAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriaRecursoFisicosAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriaRecursoFisicosAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriasAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriasAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriasAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriaByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriaByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaByName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriaByNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriaByNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHorariosAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHorariosAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHorariosAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getHorarioById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getHorarioByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getHorarioByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByEstado">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGrupoByEstadoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGrupoByEstadoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByUnidad">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGrupoByUnidadRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGrupoByUnidadResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByMateria">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGrupoByMateriaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGrupoByMateriaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoByName">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGrupoByNameRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGrupoByNameResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaRecursoFisicoByIdMateria">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriaRecursoFisicoByIdMateriaRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriaRecursoFisicoByIdMateriaResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getMateriaRecursoFisicoByRecursoFisico">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getMateriaRecursoFisicoByRecursoFisicoRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getMateriaRecursoFisicoByRecursoFisicoResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGruposAll">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGruposAllRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGruposAllResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getGrupoById">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getGrupoByIdRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getGrupoByIdResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="DelegadoEspaciosfisicosService">
+
+      <wsdl:port binding="impl:DelegadoEspaciosfisicosSoapBinding" name="DelegadoEspaciosfisicos">
+
+         <wsdlsoap:address location="http://localhost:8081/espaciosFisicos/services/DelegadoEspaciosfisicos"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
