@@ -1,97 +1,25 @@
+/**
+ * DelegadoEspaciosfisicos.java
+ *
+ * This file was auto-generated from WSDL
+ * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
+ */
+
 package espaciosFisicos.delegado;
 
-import business.BusinessImpl;
-import espaciosFisicos.logica.LogicaEspaciosFisicos;
-import espaciosFisicos.logica.LogicaHorarios;
-
-public class DelegadoEspaciosfisicos {
-	
-	public DelegadoEspaciosfisicos() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	LogicaEspaciosFisicos logicaEspaciosFisicos = new LogicaEspaciosFisicos().getInstance();
-	LogicaHorarios logicaHorarios = new LogicaHorarios();
-	
-	/*
-	 * Horarios
-	 */	
-	
-	public String getHorariosAll(){
-		return logicaHorarios.getHorariosAll();
-	}
-	
-	public String getHorarioById(String id){
-		return logicaHorarios.getHorarioById(id);
-	}
-	
-	/*
-	 * Grupos
-	 */
-	
-	public String getGruposAll(){
-		return logicaEspaciosFisicos.getGruposAll();
-	}
-	
-	public String getGrupoById(String id){
-		return logicaEspaciosFisicos.getGrupoById(id);
-	}
-	
-	public String getGrupoByName(String name){
-		return logicaEspaciosFisicos.getGrupoByName(name);
-	}
-	
-	public String getGrupoByMateria(String materia){
-		return logicaEspaciosFisicos.getGrupoByMateria(materia);
-	}
-	
-	public String getGrupoByUnidad(String unidad){
-		return logicaEspaciosFisicos.getGrupoByUnidad(unidad);
-	}
-	
-	public String getGrupoByEstado(String estado){
-		return logicaEspaciosFisicos.getGrupoByEstado(estado);
-	}
-	
-	/*
-	 * Materias
-	 */
-	
-	public String getMateriaByName(String name) {
-		return logicaEspaciosFisicos.getMateriaByName(name);
-	}
-
-	public String getMateriaById(String id) {
-		return logicaEspaciosFisicos.getMateriaById(id);
-	}
-
-	public String getMateriasAll() {
-		return logicaEspaciosFisicos.getMateriasAll();
-	}
-	
-	/*
-	 * Materia recursos fisico
-	 */
-	
-	public String getMateriaRecursoFisicoByRecursoFisico(String recursoFisico) {
-		return logicaEspaciosFisicos.getMateriaRecursoFisicoByRecursoFisico(recursoFisico);	
-	}
-
-	public String getMateriaRecursoFisicoByIdMateria(String id) {
-		return logicaEspaciosFisicos.getMateriaRecursoFisicoByIdMateria(id);
-	}
-
-	public String getMateriaRecursoFisicosAll() {
-		return logicaEspaciosFisicos.getMateriaRecursoFisicosAll();
-	}
-	
-	
-	/*
-	 * Recursos fisicos
-	 
-	public String getRecursoFisicosByMateria(String idMateria) {
-		return logicaEspaciosFisicos.getRecursoFisicosByMateria(idMateria);
-	}*/
-		
-
+public interface DelegadoEspaciosfisicos extends java.rmi.Remote {
+    public java.lang.String getMateriaRecursoFisicosAll() throws java.rmi.RemoteException;
+    public java.lang.String getMateriasAll() throws java.rmi.RemoteException;
+    public java.lang.String getMateriaById(java.lang.String id) throws java.rmi.RemoteException;
+    public java.lang.String getMateriaByName(java.lang.String name) throws java.rmi.RemoteException;
+    public java.lang.String getHorariosAll() throws java.rmi.RemoteException;
+    public java.lang.String getHorarioById(java.lang.String id) throws java.rmi.RemoteException;
+    public java.lang.String getGrupoByEstado(java.lang.String estado) throws java.rmi.RemoteException;
+    public java.lang.String getGrupoByUnidad(java.lang.String unidad) throws java.rmi.RemoteException;
+    public java.lang.String getGrupoByMateria(java.lang.String materia) throws java.rmi.RemoteException;
+    public java.lang.String getGrupoByName(java.lang.String name) throws java.rmi.RemoteException;
+    public java.lang.String getMateriaRecursoFisicoByIdMateria(java.lang.String id) throws java.rmi.RemoteException;
+    public java.lang.String getMateriaRecursoFisicoByRecursoFisico(java.lang.String recursoFisico) throws java.rmi.RemoteException;
+    public java.lang.String getGruposAll() throws java.rmi.RemoteException;
+    public java.lang.String getGrupoById(java.lang.String id) throws java.rmi.RemoteException;
 }
