@@ -81,7 +81,7 @@ Built on Apr 22, 2006 (06:55:48 PDT)-->
 
       <wsdl:port binding="impl:DelegadoLocationSoapBinding" name="DelegadoLocation">
 
-         <wsdlsoap:address location="http://localhost:8080/location/services/DelegadoLocation"/>
+         <wsdlsoap:address location="http://localhost:8081/location/services/DelegadoLocation"/>
 
       </wsdl:port>
 

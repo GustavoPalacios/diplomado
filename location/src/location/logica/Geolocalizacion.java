@@ -25,18 +25,15 @@ public class Geolocalizacion {
 		try{
 			//String uri = "https://maps.googleapis.com/maps/api/geocode/json?address=Colombia,Valle%20del%20Cauca,Cali,Belalcazar,Cra17,21,16&key=AIzaSyAtpKpyIYOiLN0FN3zqWZiIWZVmaa6tXdo";
 			URL url = new URL(uri);
-			HttpURLConnection connection =
-			    (HttpURLConnection) url.openConnection();
+			HttpURLConnection connection =(HttpURLConnection) url.openConnection();
 			connection.setRequestMethod("GET");
 			connection.setRequestProperty("Content-Type", "application/json");
 			connection.setRequestProperty("Accept", "application/json");	
 			InputStream inputStream = connection.getInputStream();	
 		
-			BufferedReader br = null;
+			BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
 			StringBuilder sb = new StringBuilder();
-			String line;
-			
-			br = new BufferedReader(new InputStreamReader(inputStream));
+			String line;	
 			while ((line = br.readLine()) != null) {
 				sb.append(line);
 			}
@@ -87,7 +84,7 @@ public class Geolocalizacion {
 		String lng = jsonResult3.get("lng").getAsString();	
 		
 		//String estructura = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins=3.4426358,-76.5207345&destinations=3.470275,-76.527559&key=AIzaSyAtpKpyIYOiLN0FN3zqWZiIWZVmaa6tXdo";
-		String estructura = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+lat+","+lng+"&destinations=3.470275,-76.527559&key=AIzaSyAtpKpyIYOiLN0FN3zqWZiIWZVmaa6tXdo";
+		String estructura = "https://maps.googleapis.com/maps/api/distancematrix/json?units=imperial&origins="+lat+","+lng+"&destinations=3.331971,-76.5271455&key=AIzaSyAtpKpyIYOiLN0FN3zqWZiIWZVmaa6tXdo";
 		String distance = gn.geolocalizacion(estructura);
 		
 		jsonObject = new JsonObject ();

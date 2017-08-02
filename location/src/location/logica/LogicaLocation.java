@@ -43,8 +43,8 @@ private static LogicaLocation instance;
 		//String direcciones = "Colombia,Valle%20del%20Cauca,Cali,Belalcazar,Cra17,21,16-Colombia,Valle%20del%20Cauca,Cali,Belalcazar,Cra17,21,16";
 		String[] split = direcciones.split("-"); 
 		int cont = 0;
-		for (String direccion : split){
-			String tmp = geolocalizacion.distance(direccion);
+		for (String dir : split){
+			String tmp = geolocalizacion.distance(dir);
 			map.put(cont+"", tmp);
 			cont++;
 		}
